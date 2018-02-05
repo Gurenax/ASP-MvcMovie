@@ -19,11 +19,23 @@ namespace MvcMovie.Controllers
         //
         // GET: /HelloWorld/Welcome/
 
-        public string Welcome()
-        {
-            return "This is the Welcome action method...";
-        }
+        // example 1
+        //public string Welcome()
+        //{
+        //    return "This is the Welcome action method...";
+        //}
 
+        // example 2
+        //public string Welcome(string name, int numTimes = 1)
+        //{
+        //    return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: " + numTimes);
+        //}
+
+        // example 3
+        public string Welcome(string name, int ID = 1)
+        {
+            return HttpUtility.HtmlEncode("Hello " + name + ", ID: " + ID);
+        }
         //public ActionResult Index()
         //{
         //    return View ();

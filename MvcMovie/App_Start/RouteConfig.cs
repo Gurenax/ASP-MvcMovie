@@ -9,19 +9,17 @@ namespace MvcMovie
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            // e.g. https://www.codeproject.com/Articles/641783/Customizing-Routes-in-ASP-NET-MVC
-            // HelloWorld
-            //routes.MapRoute(
-            //    name: "HelloWorld",
-            //    url: "HelloWorld/{action}/{id}",
-            //    defaults: new { controller = "HelloWorld", action = "All", id = UrlParameter.Optional }
-            //);
-
             // Default
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
+            // Hello
+            routes.MapRoute(
+                name: "Hello",
+                url: "{controller}/{action}/{name}/{id}"
             );
         }
     }
