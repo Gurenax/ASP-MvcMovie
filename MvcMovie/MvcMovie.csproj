@@ -92,6 +92,7 @@
     <Content Include="bootstrap-4.0.0-beta.2-dist\js\bootstrap.bundle.min.js" />
     <Content Include="bootstrap-4.0.0-beta.2-dist\js\bootstrap.js" />
     <Content Include="bootstrap-4.0.0-beta.2-dist\js\bootstrap.min.js" />
+    <Content Include="Views\HelloWorld\Welcome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bootstrap-4.0.0-beta.2-dist\css\bootstrap-grid.css.map" />

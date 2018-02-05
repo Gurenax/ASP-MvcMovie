@@ -39,10 +39,20 @@ namespace MvcMovie.Controllers
         //}
 
         // example 3 - using parameters part 2
-        public string Welcome(string name, int ID = 1)
+        //public string Welcome(string name, int ID = 1)
+        //{
+        //    return HttpUtility.HtmlEncode("Hello " + name + ", ID: " + ID);
+        //}
+
+        // example 4 - using view
+        public ActionResult Welcome(string name, int numTimes = 1)
         {
-            return HttpUtility.HtmlEncode("Hello " + name + ", ID: " + ID);
+            ViewBag.Message = "Hello " + name;
+            ViewBag.NumTimes = numTimes;
+
+            return View();
         }
+
         //public ActionResult Index()
         //{
         //    return View ();
