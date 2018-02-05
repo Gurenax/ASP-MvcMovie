@@ -11,9 +11,16 @@ namespace MvcMovie.Controllers
         //
         // GET: /HelloWorld/
 
-        public string Index()
+        // example 1
+        //public string Index()
+        //{
+        //    return "<div>This is my <strong>default</strong> action...</div>";
+        //}
+
+        // example 2 - Using a view
+        public ActionResult Index()
         {
-            return "<div>This is my <strong>default</strong> action...</div>";
+            return View();
         }
 
         //
@@ -25,13 +32,13 @@ namespace MvcMovie.Controllers
         //    return "This is the Welcome action method...";
         //}
 
-        // example 2
+        // example 2 - using parameters part 1
         //public string Welcome(string name, int numTimes = 1)
         //{
         //    return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: " + numTimes);
         //}
 
-        // example 3
+        // example 3 - using parameters part 2
         public string Welcome(string name, int ID = 1)
         {
             return HttpUtility.HtmlEncode("Hello " + name + ", ID: " + ID);
